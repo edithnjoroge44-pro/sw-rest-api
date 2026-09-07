@@ -1,0 +1,12 @@
+# Render Blueprint — deploy this REST API with one click.
+# 1. Push this repo to GitHub.
+# 2. On render.com: New → Blueprint → select this repo → Deploy.
+#    (Free tier: choose the free Web Service; set the Python environment automatically.)
+services:
+  - type: web
+    name: sw-rest-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app.server:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /health
