@@ -1,6 +1,6 @@
 # Production REST API Service (Python + Flask)
 
-> **Stack:** Python · Flask · SQLite · structured error handling · request validation · pytest · Docker · GitHub Actions CI/CD
+> **Stack:** Python · Flask · SQLite · structured error handling · request validation · pytest · Docker
 > **Proves:** hands-on **software engineering** — designing, building, testing, and shipping a real HTTP service with validation, error handling, and CI. This is the core deliverable for a SWE role.
 
 A small but production-shaped REST service (a task/inventory API) demonstrating the engineering practices a senior SWE is expected to enforce: separation of concerns, input validation, consistent error responses, a data layer, automated tests, containerization, and continuous integration.
@@ -13,7 +13,7 @@ A small but production-shaped REST service (a task/inventory API) demonstrating 
 - **Data layer** — an SQLite-backed repository, isolated from the HTTP layer (testable).
 - **Automated tests** — unit + integration tests (pytest) covering happy paths, validation failures, 404s and duplicates.
 - **Docker** — a `Dockerfile` to run it anywhere.
-- **CI/CD** — a GitHub Actions workflow that runs tests and lints on every push.
+- **CI** — a GitHub Actions workflow (runs tests + lint on every push) is included as `swe_ci_backups/sw-rest-api_ci.yml` in the workspace; it has yet to be committed to GitHub. Docker + local pytest fully validate the service today.
 
 ## Endpoints
 | Method | Path | Behaviour |
